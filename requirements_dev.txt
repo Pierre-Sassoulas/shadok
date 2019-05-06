@@ -1,0 +1,8 @@
+-r requirements.txt
+
+coverage
+python-coveralls
+mock
+pylint
+flake8
+pre-commit
