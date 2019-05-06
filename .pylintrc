@@ -1,0 +1,5 @@
+# See https://github.com/PyCQA/pylint/blob/master/pylintrc for possible options
+[MASTER]
+extension-pkg-whitelist=lxml,wand
+max-line-length=120
+disable=C0111,C0330,E0401

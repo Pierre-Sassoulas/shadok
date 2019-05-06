@@ -1,0 +1,22 @@
+[flake8]
+ignore =
+    F403,
+    F405,
+    E121,
+    E123,
+    E126,
+    E203, # Incompatible with black see https://github.com/ambv/black/issues/315
+    E226,
+    E24,
+    E704,
+    W503,
+    W504
+
+max-line-length=120
+
+exclude =
+    venv/,
+    .git,
+    __pycache__,
+
+max-complexity = 10
