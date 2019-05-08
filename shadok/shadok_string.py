@@ -37,8 +37,5 @@ class ShadokString(str):
         number = ShadokInteger(self.raw_string)
         return int(number)
 
-    def __float__(self):
-        raise NotImplementedError()
-
     def __bool__(self):
         raise NotImplementedError()
