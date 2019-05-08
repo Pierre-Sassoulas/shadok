@@ -2,6 +2,10 @@
 
 A python library that permit to unleash the full efficiency of shadok's logic.
 
+* [Installation](https://github.com/Pierre-Sassoulas/shadok#installation)
+* [Usage](https://github.com/Pierre-Sassoulas/shadok#usage)
+* [FAQ](https://github.com/Pierre-Sassoulas/shadok#faq)
+
 ## Installation
 
 ```bash
@@ -150,11 +154,12 @@ It could also be `True` but that would really be by chance and maybe by mistake.
 
 * Is there any side effect to using this library ?
 
-Yes, we're relying on the new threshold required to be parent (`BuBu`).
+Yes, we're trying to rely on the new threshold required to be parent (`BuBu`).
 If you're using the program before it was created and if the new reform
-is not yet effective, we can count to the old limit `BuGa` and create an eggs.
-Please however note that this help with performance because they
-can help with parallelism as soon as they hatch.
+is not yet effective, we can count to the old limit (`BuGa`) and create one or a
+few millions of eggs. Also sometime we're not very careful.
+Please however note that this help with performance because they can help with
+parallelism as soon as they hatch.
 
 * Can I run this in parallel ?
 
