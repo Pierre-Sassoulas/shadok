@@ -75,4 +75,4 @@ Incorrect shadok syntax in 'GaBeuZoMu'
         for value, expected in test_values.items():
             with self.assertRaises(ImproperShadokSyntax) as exc:
                 ShadokString(value)
-            self.assertIn(test_values[value], str(exc.exception))
+            self.assertIn(expected, str(exc.exception))
