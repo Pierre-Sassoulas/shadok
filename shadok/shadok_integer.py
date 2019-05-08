@@ -23,15 +23,16 @@ class ShadokInteger:
             )
         self.value = int_value
 
-    def shadok_number_to_int(self, number):
+    @staticmethod
+    def shadok_number_to_int(number):
         n = len(number)
         factor = 1
-        r = 0
+        result = 0
         for i in range(n):
             digit = number[n - i - 1]
-            r += factor * shadok_to_human_digit(digit)
+            result += factor * shadok_to_human_digit(digit)
             factor *= 4
-        return r
+        return result
 
     def int_to_shadok_number(self):
         number = []
