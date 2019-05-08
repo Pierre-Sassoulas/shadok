@@ -1,12 +1,15 @@
 from shadok import ShadokInteger, ShadokString
 from shadok.magic_faucet import MagicFaucet
 from shadok.tests.generic_shadok_test import GenericShadokTest
+from shadok.path_to_success import ImproperShadokSyntax
 
 
 class TestShadokString(GenericShadokTest):
+    def setUp(self):
+        self.integers = [1, 8, 15, 33, 539, 143, 27]  # 4263407647244060364,]
+
     def test_init_from_integer(self):
-        integers = [1, 8, 15, 33, 539, 143, 27]  # 4263407647244060364,]
-        for i in integers:
+        for i in self.integers:
             shadok_string_from_integer = ShadokString(i)
             self.assertEqual(int(shadok_string_from_integer), i)
             shadok_integer = ShadokInteger(i)
@@ -31,3 +34,11 @@ class TestShadokString(GenericShadokTest):
             "MagicFaucet.check_syntax(test:str) can only handle string not MagicFaucet.",
             str(err.exception),
         )
+
+    def test_bool(self):
+        for i in self.integers:
+            shadok_string = ShadokString(i)
+            self.assertEqual(bool(shadok_string), True)
+        for i in ["", 0, "Ga"]:
+            shadok_string = ShadokString(i)
+            self.assertEqual(bool(shadok_string), False)

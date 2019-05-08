@@ -23,7 +23,8 @@ class ShadokString(str):
             msg += "a ShadokInteger, or a ShadokString, "
             msg += "not from a '%s'" % input_string.__class__.__name__
             raise ValueError(msg)
-        MagicFaucet.check_syntax(self.raw_string)
+        if self.raw_string != "":
+            MagicFaucet.check_syntax(self.raw_string)
         self.normalized_string = MagicFaucet.normalize(self.raw_string)
         super(ShadokString, self).__init__()
 
@@ -38,4 +39,4 @@ class ShadokString(str):
         return int(number)
 
     def __bool__(self):
-        raise NotImplementedError()
+        return bool(int(self))
