@@ -1,6 +1,6 @@
 from shadok.language import Symbol
 
-_shadok_to_human = {
+_SHADOK_TO_HUMAN = {
     Symbol.GA.value: 0,
     Symbol.BU.value: 1,
     Symbol.ZO.value: 2,
@@ -11,7 +11,7 @@ _shadok_to_human = {
     Symbol.MEU_DIGIT.value: 3,
 }
 
-__human_to_shadok = {
+__HUMAN_TO_SHADOK = {
     0: Symbol.GA_DIGIT.value,
     1: Symbol.BU_DIGIT.value,
     2: Symbol.ZO_DIGIT.value,
@@ -20,8 +20,8 @@ __human_to_shadok = {
 
 
 def shadok_to_human_digit(letter):
-    return _shadok_to_human[letter]
+    return _SHADOK_TO_HUMAN[letter]
 
 
 def human_to_shadok_digit(integer):
-    return __human_to_shadok[integer]
+    return __HUMAN_TO_SHADOK[integer]
