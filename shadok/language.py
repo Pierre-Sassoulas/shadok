@@ -6,14 +6,10 @@ class Symbol(enum.Enum):
     BU_DIGIT = "−"
     ZO_DIGIT = "ᒧ"
     MEU_DIGIT = "◿"
-    SPACE = "5"
     GA = "9"
     BU = "8"
     ZO = "7"
     MEU = "6"
-
-    def is_space(self):
-        return self is Symbol.SPACE
 
     def is_digit(self):
         return self in [
