@@ -114,9 +114,19 @@ It also permit to pretty print your shadok without instantiation of a `ShadokStr
 Sadly the highest order of meta-bin yet attainable is only 31. Those are big very meta bins
 though.
 
+* My empty meta bins are disappearing when I create a `ShadokInteger` ?!
+But I need them if my number get bigger !
+
+Stop reporting this issue. This is a feature not a bug ! You should create meta bins
+only when you need them for efficiency. I don't care about your use case.
+
+* Why is `GaGaGaGaGaBu` becoming `Bu` when I cast it to `int` ?
+
+See "*My empty meta bins are disappearing*".
+
 * Is there any side effect to using this library ?
 
-Yes, sometimes we're not careful and we count to BuGa, so some shadok's eggs
+Yes, sometimes we're not careful and we count to *BuGa*, so some shadok's eggs
 can be created. Please however note that this help with performance because they
 can help with parallelism as soon as they hatch.
 
