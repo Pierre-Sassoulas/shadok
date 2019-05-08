@@ -10,26 +10,26 @@ def all_capitalization(word):
         map(
             "".join,
             itertools.product(
-                *((character.upper(), character.lower()) for character in word)
+                *((character.upper(), character.lower()) for character in word.name)
             ),
         )
     )
 
 
+def shadok_string_combination(word):
+    return [ShadokString(combination) for combination in all_capitalization(word)]
+
+
 class GenericShadokTest(TestCase):
     def setUp(self):
-        raw_combinations = lambda word: all_capitalization(word.name)
-        shadok_string_combination = lambda word: [
-            ShadokString(combination) for combination in raw_combinations(word)
-        ]
         self.gas = shadok_string_combination(Symbol.GA)
-        self.gas_raw = raw_combinations(Symbol.GA)
+        self.gas_raw = all_capitalization(Symbol.GA)
         self.bus = shadok_string_combination(Symbol.BU)
-        self.bus_raw = raw_combinations(Symbol.BU)
+        self.bus_raw = all_capitalization(Symbol.BU)
         self.zos = shadok_string_combination(Symbol.ZO)
-        self.zos_raw = raw_combinations(Symbol.ZO)
+        self.zos_raw = all_capitalization(Symbol.ZO)
         self.meus = shadok_string_combination(Symbol.MEU)
-        self.meus_raw = raw_combinations(Symbol.MEU)
+        self.meus_raw = all_capitalization(Symbol.MEU)
         self.words = {
             "Ga": ["{ga}"],
             "GaGa": ["{ga}{ga}"],
