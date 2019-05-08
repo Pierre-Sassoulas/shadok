@@ -25,6 +25,7 @@ class ShadokString(str):
             raise ValueError(msg)
         MagicFaucet.check_syntax(self.raw_string)
         self.normalized_string = MagicFaucet.normalize(self.raw_string)
+        super(ShadokString, self).__init__()
 
     def __repr__(self):
         return MagicFaucet.pretty_print(self.raw_string)
