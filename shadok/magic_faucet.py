@@ -36,11 +36,12 @@ class MagicFaucet:
                 % text.__class__.__name__
             )
         for word in text.split(" "):
-            result = re.finditer(MagicFaucet.PROPER_SHADOK_WORD, word)
-            # print("REGEX MATCH %s for '%s' : %s" % (MagicFaucet.PROPER_SHADOK_WORD, word, result))
-            matches = list(result)
-            if len(matches) != 1 or matches[0].group() != word:
-                raise ImproperShadokSyntax(word, matches)
+            if word:
+                result = re.finditer(MagicFaucet.PROPER_SHADOK_WORD, word)
+                # print("REGEX MATCH %s for '%s' : %s" % (MagicFaucet.PROPER_SHADOK_WORD, word, result))
+                matches = list(result)
+                if len(matches) != 1 or matches[0].group() != word:
+                    raise ImproperShadokSyntax(word, matches)
 
     @staticmethod
     def pretty_print(text):
