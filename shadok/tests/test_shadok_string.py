@@ -35,6 +35,36 @@ class TestShadokString(GenericShadokTest):
             str(err.exception),
         )
 
+    def test_add(self):
+        test_values = {"bu": "BuGAMeu", "BU Ga": " BuGAMeu"}
+        for initial, added in test_values.items():
+            shadok_string = ShadokString(initial)
+            shadok_string += added
+            self.assertEqual(str(shadok_string), str(ShadokString(initial + added)))
+        test_values_with_syntax_error = [
+            {
+                "initial": "bu ",
+                "added": "  Bu GaMeuh",
+                "expected": """
+Incorrect shadok syntax in 'GaMeuh'
+                                 ^
+""",
+            },
+            {
+                "initial": "BU Ga",
+                "added": " Gibi",
+                "expected": """
+Incorrect shadok syntax in 'Gibi'
+                            ^^^^
+""",
+            },
+        ]
+        for test_value_with_syntax_error in test_values_with_syntax_error:
+            shadok_string = ShadokString(test_value_with_syntax_error["initial"])
+            with self.assertRaises(ImproperShadokSyntax) as err:
+                shadok_string += test_value_with_syntax_error["added"]
+            self.assertIn(test_value_with_syntax_error["expected"], str(err.exception))
+
     def test_bool(self):
         for i in self.integers:
             shadok_string = ShadokString(i)

@@ -34,6 +34,10 @@ class ShadokString(str):
     def __str__(self):
         return self.__repr__()
 
+    def __add__(self, other):
+        other = ShadokString(other)
+        return ShadokString(str(self) + str(other))
+
     def __int__(self):
         number = ShadokInteger(self.raw_string)
         return int(number)
