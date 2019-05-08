@@ -9,7 +9,7 @@ require = [x.strip() for x in require]
 
 setuptools.setup(
     name="shadok",
-    version="bu.bu.bu",
+    version="1.2.0",
     author="pierre-sassoulas",
     author_email="pierre.sassoulas@gmail.com",
     description="Permit to unleash the full efficiency of shadok's logic in Python.",

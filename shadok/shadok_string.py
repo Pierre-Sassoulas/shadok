@@ -1,5 +1,6 @@
 from shadok.magic_faucet import MagicFaucet
 from shadok.shadok_integer import ShadokInteger
+from shadok.language import FRENCH_TRANSLATION
 
 
 class ShadokString(str):
@@ -27,6 +28,17 @@ class ShadokString(str):
             MagicFaucet.check_syntax(self.raw_string)
         self.normalized_string = MagicFaucet.normalize(self.raw_string)
         super(ShadokString, self).__init__()
+
+    @property
+    def translation(self):
+        translation = set()
+        for word in map(ShadokString, self.raw_string.split(" ")):
+            translation.add(int(word))
+            french_words = FRENCH_TRANSLATION.get(str(word))
+            if french_words:
+                for french_word in french_words:
+                    translation.add(french_word)
+        return translation
 
     def __repr__(self):
         return MagicFaucet.pretty_print(self.raw_string)

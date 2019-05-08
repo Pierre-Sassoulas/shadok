@@ -7,6 +7,7 @@ from shadok.path_to_success import ImproperShadokSyntax
 class TestShadokString(GenericShadokTest):
     def setUp(self):
         self.integers = [1, 8, 15, 33, 539, 143, 27]  # 4263407647244060364,]
+        super(TestShadokString, self).setUp()
 
     def test_init_from_integer(self):
         for i in self.integers:
@@ -72,3 +73,13 @@ Incorrect shadok syntax in 'Gibi'
         for i in ["", 0, "Ga"]:
             shadok_string = ShadokString(i)
             self.assertEqual(bool(shadok_string), False)
+
+    def test_translation(self):
+        for i in self.words:
+            self.assertGreater(len(ShadokString(i).translation), 0)
+        self.assertEqual(ShadokString("gagaga").translation, {0, "Espèce d'imbécile"})
+        self.assertEqual(ShadokString("ga").translation, {0, "Non", "Moi", "Intérieur"})
+        self.assertEqual(ShadokString("MeuMeuMeuMeuMeu").translation, {"Fin", 1023})
+        self.assertEqual(
+            ShadokString("zozo").translation, {10, "Indépendant", "Nouilles"}
+        )

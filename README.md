@@ -91,6 +91,66 @@ Incorrect shadok syntax in 'Gibi'
 Au Goulp !
 ```
 
+You can also translate a ShadokString to french :
+
+```python
+import itertools
+from shadok import ShadokString
+result = lambda val:print("Translation of {} : {}".format(val, ShadokString(val).translation))
+letters = ["Ga", "Bu", "Zo", "Meu"]
+for a in  letters:
+    result(a)
+for a, b in itertools.product(letters, letters):
+    result(a+b)
+for a,b,c in itertools.product(letters, letters, letters):
+    result(a+b+c)
+```
+
+Will result in this output :
+
+```
+Translation of Ga : {0, 'Moi', 'Intérieur', 'Non'}
+Translation of Bu : {1, 'Oui', 'Eau'}
+Translation of Zo : {'Nouille', 2, 'Extérieur', 'Lui'}
+Translation of Meu : {'Trou', 3}
+Translation of GaGa : {0, 'Toi'}
+Translation of GaBu : {1, 'Notion'}
+Translation of GaZo : {2}
+Translation of GaMeu : {3}
+Translation of BuGa : {4, 'Petite pompe'}
+Translation of BuBu : {5}
+Translation of BuZo : {6}
+Translation of BuMeu : {7}
+Translation of ZoGa : {8}
+Translation of ZoBu : {9}
+Translation of ZoZo : {10}
+Translation of ZoMeu : {11}
+Translation of MeuGa : {12}
+Translation of MeuBu : {13}
+Translation of MeuZo : {14}
+Translation of MeuMeu : {'Trous', 15}
+Translation of GaGaGa : {0, "Espèce d'imbécile"}
+Translation of GaGaBu : {1}
+Translation of GaGaZo : {2}
+Translation of GaGaMeu : {3}
+Translation of GaBuGa : {4}
+Translation of GaBuBu : {5}
+Translation of GaBuZo : {6}
+Translation of GaBuMeu : {7}
+Translation of GaZoGa : {8}
+Translation of GaZoBu : {9}
+Translation of GaZoZo : {10}
+Translation of GaZoMeu : {11}
+Translation of GaMeuGa : {12}
+Translation of GaMeuBu : {13}
+Translation of GaMeuZo : {14}
+Translation of GaMeuMeu : {15}
+Translation of BuGaGa : {16, 'Grosse pompe'}
+
+...
+Translation of MeuMeuMeu : {63}
+```
+
 ### MagicFaucet
 
 The `MagicFaucet` permit to check if a string is in proper Shadok syntax :
@@ -154,12 +214,12 @@ It could also be `True` but that would really be by chance and maybe by mistake.
 
 * Is there any side effect to using this library ?
 
-Yes, we're trying to rely on the new threshold required to be parent (`BuBu`).
+Yes, for small operations, we're trying to rely on the new threshold required to be parent (`BuBu`).
 If you're using the program before it was created and if the new reform
 is not yet effective, we can count to the old limit (`BuGa`) and create one or a
-few millions of eggs. Also sometime we're not very careful.
-Please however note that this help with performance because they can help with
-parallelism as soon as they hatch.
+few millions shadok's eggs, if we're not careful. Please however note that for big operation
+this help with performance because shadok can help with parallelism as soon as they hatch,
+so in this situation we're counting over 5 on purpose.
 
 * Can I run this in parallel ?
 

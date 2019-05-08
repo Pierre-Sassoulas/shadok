@@ -23,16 +23,21 @@ class Symbol(enum.Enum):
         return self in [Symbol.GA, Symbol.BU, Symbol.ZO, Symbol.MEU]
 
 
+# Careful the key must be formatted properly.
 FRENCH_TRANSLATION = {
-    "Ga": ["Moi", "Non"],
+    "Ga": ["Moi", "Non", "Intérieur"],
+    "GaBu": ["Notion"],
     "GaGa": ["Toi"],
     "GaGaGa": ["Espèce d'imbécile"],
-    "Bu": ["Oui"],
+    "Bu": ["Oui", "Eau"],
     "BuGa": ["Petite pompe"],
     "BuGaGa": ["Grosse pompe"],
-    "Zo": ["Lui"],
+    "Zo": ["Lui", "Extérieur", "Nouille"],
     "ZoBuGa": ["Pomper avec une petite pompe"],
     "ZoBuBuGa": ["Pomper avec une grosse pompe"],
+    "ZoZo": ["Indépendant", "Nouilles"],
+    "Meu": ["Trou"],
+    "MeuMeu": ["Trous"],
     "MeuGaBu": ["Passoire"],
     "MeuMeuMeuMeuMeu": ["Fin"],
 }
