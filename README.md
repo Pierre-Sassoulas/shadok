@@ -178,9 +178,10 @@ Au Goulp !
 
 The `MagicFaucet` also permit to pretty print your shadok without instantiation of a `ShadokString`:
 
-```
->>> MagicFaucet.pretty_print("meumEumUumeu")
-'MeuMeuMeuMeu'
+```python
+from shadok import MagicFaucet
+print(MagicFaucet.pretty_print("meumEumEUmEu"))
+# 'MeuMeuMeuMeu'
 ```
 
 ## FAQ
