@@ -61,11 +61,11 @@ Incorrect shadok syntax in 'Ga!'
 """,
             "Ga42Ga": """
 Incorrect shadok syntax in 'Ga42Ga'
-                              ^^  
+                              ^^
 """,
             "AGaGa": """
 Incorrect shadok syntax in 'AGaGa'
-                            ^    
+                            ^
 """,
             "GaBeuZoMu": """
 Incorrect shadok syntax in 'GaBeuZoMu'

@@ -1,6 +1,6 @@
+from shadok.language import FRENCH_TRANSLATION
 from shadok.magic_faucet import MagicFaucet
 from shadok.shadok_integer import ShadokInteger
-from shadok.language import FRENCH_TRANSLATION
 
 
 class ShadokString(str):

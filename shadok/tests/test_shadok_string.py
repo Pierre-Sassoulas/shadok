@@ -1,7 +1,7 @@
 from shadok import ShadokInteger, ShadokString
 from shadok.magic_faucet import MagicFaucet
-from shadok.tests.generic_shadok_test import GenericShadokTest
 from shadok.path_to_success import ImproperShadokSyntax
+from shadok.tests.generic_shadok_test import GenericShadokTest
 
 
 class TestShadokString(GenericShadokTest):
