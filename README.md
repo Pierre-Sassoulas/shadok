@@ -48,7 +48,7 @@ Traceback (most recent call last):
     % value
 shadok.path_to_success.ImproperShadokLogic: Cannot cast string containing
 multiple words ('Buga ZoMeu') to an int.
-``` 
+```
 
 ### ShadokString
 
@@ -191,15 +191,14 @@ print(MagicFaucet.pretty_print("meumEumEUmEu"))
 Sadly the highest order of meta-bin yet attainable is only 31. Those are big very meta bins
 though.
 
-* My empty meta bins are disappearing when I create a `ShadokInteger` ?!
-But I need them if my number get bigger !
-
-Stop reporting this issue. This is a feature not a bug ! You should create meta bins
-only when you need them for efficiency. I don't care about your use case.
-
 * Why is `GaGaGaGaGaBu` becoming `Bu` when I cast it to `int` ?
 
 See "*My empty meta bins are disappearing*".
+
+* My empty meta bins are disappearing when I create a `ShadokInteger` ?!
+But I need them if my number get bigger !
+
+You should create meta bins only when you need them for efficiency.
 
 * My string was `Gagaga` and was casted to a boolean. It returned `False`, shouldn't it means
 `You fool !` and be `True` instead ?
