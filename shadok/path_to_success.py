@@ -4,7 +4,7 @@
 class ImproperShadokSyntax(Exception):
     def __init__(self, word, matches):
         base_message = "\nIncorrect shadok syntax in '"
-        msg = "{}{}'".format(base_message, word)
+        msg = f"{base_message}{word}'"
         msg += "\n{}".format(" " * (len(base_message) - len("'")))
         chevrons = []
         for i in range(len(word)):
