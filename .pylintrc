@@ -2,5 +2,5 @@
 [MASTER]
 extension-pkg-whitelist=lxml,wand
 max-line-length=120
-disable=C0111,C0330,E0401
+disable=C0111,E0401
 good-names=i,j,k,n,_,ga,bu,zo,meu
