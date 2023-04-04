@@ -3,7 +3,11 @@ repos:
     rev: 23.3.0
     hooks:
     - id: black
-    python_version: python3.5
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.37.3
+    hooks:
+      - id: pyupgrade
+        args: [--py38-plus]
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.1.0
     hooks:
