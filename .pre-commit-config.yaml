@@ -3,7 +3,7 @@ repos:
     rev: 23.3.0
     hooks:
     - id: black
-- repo: https://github.com/asottile/pyupgrade
+-   repo: https://github.com/asottile/pyupgrade
     rev: v2.37.3
     hooks:
       - id: pyupgrade
@@ -26,3 +26,8 @@ repos:
     rev: v3.0.0a6
     hooks:
         - id: pylint
+-   repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.0.0-alpha.6
+    hooks:
+      - id: prettier
+        args: [--prose-wrap=always, --print-width=88]
