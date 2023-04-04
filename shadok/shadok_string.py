@@ -27,7 +27,7 @@ class ShadokString(str):
         if self.raw_string != "":
             MagicFaucet.check_syntax(self.raw_string)
         self.normalized_string = MagicFaucet.normalize(self.raw_string)
-        super(ShadokString, self).__init__()
+        super().__init__()
 
     @property
     def translation(self):
