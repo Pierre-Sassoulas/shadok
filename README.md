@@ -2,9 +2,9 @@
 
 A python library that permit to unleash the full efficiency of shadok's logic.
 
-* [Installation](https://github.com/Pierre-Sassoulas/shadok#installation)
-* [Usage](https://github.com/Pierre-Sassoulas/shadok#usage)
-* [FAQ](https://github.com/Pierre-Sassoulas/shadok#faq)
+- [Installation](https://github.com/Pierre-Sassoulas/shadok#installation)
+- [Usage](https://github.com/Pierre-Sassoulas/shadok#usage)
+- [FAQ](https://github.com/Pierre-Sassoulas/shadok#faq)
 
 ## Installation
 
@@ -31,8 +31,8 @@ print(i.pronunciation, j.pronunciation, k.pronunciation)
 # BuGaZoMeu MeuZoGa Meu
 ```
 
-You can't create a `ShadokInteger` from a string with multiple word. The following
-code will raise an error. But the more you fail the closer you are to success :
+You can't create a `ShadokInteger` from a string with multiple word. The following code
+will raise an error. But the more you fail the closer you are to success :
 
 ```python
 from shadok import ShadokInteger
@@ -52,10 +52,9 @@ multiple words ('Buga ZoMeu') to an int.
 
 ### ShadokString
 
-You can create a `ShadokString` from a shadok sentences with multiple words
-separated by spaces. If a word is an shadok integer you can get its value
-with `int()`. `ShadokString` are string, it means you can create a
-`ShadokInteger` from one.
+You can create a `ShadokString` from a shadok sentences with multiple words separated by
+spaces. If a word is an shadok integer you can get its value with `int()`.
+`ShadokString` are string, it means you can create a `ShadokInteger` from one.
 
 ```python
 from shadok import ShadokString
@@ -176,7 +175,8 @@ Incorrect shadok syntax in 'GabuZoMi'
 Au Goulp !
 ```
 
-The `MagicFaucet` also permit to pretty print your shadok without instantiation of a `ShadokString`:
+The `MagicFaucet` also permit to pretty print your shadok without instantiation of a
+`ShadokString`:
 
 ```python
 from shadok import MagicFaucet
@@ -186,52 +186,51 @@ print(MagicFaucet.pretty_print("meumEumEUmEu"))
 
 ## FAQ
 
-* I need to perform serious arithmetic operations on large numbers does this library provide that ?
+- I need to perform serious arithmetic operations on large numbers does this library
+  provide that ?
 
-Sadly the highest order of meta-bin yet attainable is only 31. Those are big very meta bins
-though.
+Sadly the highest order of meta-bin yet attainable is only 31. Those are big very meta
+bins though.
 
-* Why is `GaGaGaGaGaBu` becoming `Bu` when I cast it to `int` ?
+- Why is `GaGaGaGaGaBu` becoming `Bu` when I cast it to `int` ?
 
-See "*My empty meta bins are disappearing*".
+See "_My empty meta bins are disappearing_".
 
-* My empty meta bins are disappearing when I create a `ShadokInteger` ?!
-But I need them if my number get bigger !
+- My empty meta bins are disappearing when I create a `ShadokInteger` ?! But I need them
+  if my number get bigger !
 
 You should create meta bins only when you need them for efficiency.
 
-* My string was `Gagaga` and was casted to a boolean. It returned `False`, shouldn't it means
-`You fool !` and be `True` instead ?
+- My string was `Gagaga` and was casted to a boolean. It returned `False`, shouldn't it
+  means `You fool !` and be `True` instead ?
 
-When evaluating a string containing only `Ga` you must ask yourself :
-why make a simple test when a complicated one will do ? The shadok logic tell us
-that we need to cast to an int when evaluating a boolean value.
-We must also get rid of the empty meta bins in integer. So `Gagaga` equals 0,
-equals `[False, "You fool !"]`. So when casted into a boolean you have 1 in 33
-chance that its equals to `False` and 1 in 2 chance that its equal to `"You fool !"`.
-It could also be `True` but that would really be by chance and maybe by mistake.
+When evaluating a string containing only `Ga` you must ask yourself : why make a simple
+test when a complicated one will do ? The shadok logic tell us that we need to cast to
+an int when evaluating a boolean value. We must also get rid of the empty meta bins in
+integer. So `Gagaga` equals 0, equals `[False, "You fool !"]`. So when casted into a
+boolean you have 1 in 33 chance that its equals to `False` and 1 in 2 chance that its
+equal to `"You fool !"`. It could also be `True` but that would really be by chance and
+maybe by mistake.
 
+- Is there any side effect to using this library ?
 
-* Is there any side effect to using this library ?
+Yes, for small operations, we're trying to rely on the new threshold required to be
+parent (`BuBu`). If you're using the program before it was created and if the new reform
+is not yet effective, we can count to the old limit (`BuGa`) and create one or a few
+millions shadok's eggs, if we're not careful. Please however note that for big operation
+this help with performance because shadok can help with parallelism as soon as they
+hatch, so in this situation we're counting over 5 on purpose.
 
-Yes, for small operations, we're trying to rely on the new threshold required to be parent (`BuBu`).
-If you're using the program before it was created and if the new reform
-is not yet effective, we can count to the old limit (`BuGa`) and create one or a
-few millions shadok's eggs, if we're not careful. Please however note that for big operation
-this help with performance because shadok can help with parallelism as soon as they hatch,
-so in this situation we're counting over 5 on purpose.
+- Can I run this in parallel ?
 
-* Can I run this in parallel ?
+See question above, this is the default, but you need to count to **−−** first. If you
+count to **−𝙾** or less why do you even want to run in parallel in the first place ?
 
-See question above, this is the default, but you need to count to **−−** first.
-If you count to **−𝙾** or less why do you even want to run in parallel in the first
-place ?
-
-* Do you count to **−𝙾** when you pretty print using MagicFaucet ?
+- Do you count to **−𝙾** when you pretty print using MagicFaucet ?
 
 No.
 
-* I get a `ColanderIsInFactABusError` when I instantiate my `Colander`...
+- I get a `ColanderIsInFactABusError` when I instantiate my `Colander`...
 
-Your colander seems to be a pot, please make sure your pot has a handle and is
-not, in fact, a bus.
+Your colander seems to be a pot, please make sure your pot has a handle and is not, in
+fact, a bus.

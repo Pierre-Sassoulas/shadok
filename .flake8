@@ -5,12 +5,14 @@ ignore =
     E121,
     E123,
     E126,
-    E203, # Incompatible with black see https://github.com/ambv/black/issues/315
+    # Incompatible with black see https://github.com/ambv/black/issues/315
+    E203,
     E226,
     E24,
     E704,
     W503,
-    W504
+    W504,
+    E741,
 
 max-line-length=120
 

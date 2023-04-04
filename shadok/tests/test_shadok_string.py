@@ -7,7 +7,7 @@ from shadok.tests.generic_shadok_test import GenericShadokTest
 class TestShadokString(GenericShadokTest):
     def setUp(self):
         self.integers = [1, 8, 15, 33, 539, 143, 27]  # 4263407647244060364,]
-        super(TestShadokString, self).setUp()
+        super().setUp()
 
     def test_init_from_integer(self):
         for i in self.integers:

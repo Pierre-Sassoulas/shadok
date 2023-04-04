@@ -2,7 +2,7 @@ import setuptools
 
 
 def get_long_description():
-    with open("README.md", "r", encoding="UTF-8") as readme:
+    with open("README.md", encoding="UTF-8") as readme:
         long_description = readme.read()
     return long_description
 

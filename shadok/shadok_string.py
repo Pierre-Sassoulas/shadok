@@ -5,7 +5,7 @@ from shadok.shadok_integer import ShadokInteger
 
 class ShadokString(str):
     def __init__(self, input_string):
-        """ Standardized shadok string.
+        """Standardized shadok string.
 
         :param input_string: A string containing correct shadok syntax, a ShadokString, a ShadokInt or an int.
         """
@@ -27,7 +27,7 @@ class ShadokString(str):
         if self.raw_string != "":
             MagicFaucet.check_syntax(self.raw_string)
         self.normalized_string = MagicFaucet.normalize(self.raw_string)
-        super(ShadokString, self).__init__()
+        super().__init__()
 
     @property
     def translation(self):
