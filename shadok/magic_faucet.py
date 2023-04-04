@@ -5,7 +5,6 @@ from shadok.path_to_success import ImproperShadokSyntax
 
 
 class MagicFaucet:
-
     # Pourquoi faire simple quand on peut faire compilé ?
     PROPER_SHADOK_WORD = re.compile(
         r"(?P<word>([Gg][Aa]|[Bb][Uu]|[Zz][Oo]|[Mm][Ee][Uu]|[{digit}]+[\.,]?[{digit}]*)+)".format(

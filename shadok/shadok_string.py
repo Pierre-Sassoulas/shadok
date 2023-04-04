@@ -5,7 +5,7 @@ from shadok.shadok_integer import ShadokInteger
 
 class ShadokString(str):
     def __init__(self, input_string):
-        """ Standardized shadok string.
+        """Standardized shadok string.
 
         :param input_string: A string containing correct shadok syntax, a ShadokString, a ShadokInt or an int.
         """
