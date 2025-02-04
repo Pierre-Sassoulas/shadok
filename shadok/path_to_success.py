@@ -1,4 +1,4 @@
-""" Plus ça rate, plus on a de chances que ça marche."""
+"""Plus ça rate, plus on a de chances que ça marche."""
 
 
 class ImproperShadokSyntax(Exception):
