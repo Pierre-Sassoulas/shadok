@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/psf/black
+  - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 25.9.0
     hooks:
       - id: black
@@ -19,11 +19,11 @@ repos:
       - id: check-xml
       - id: flake8
   - repo: https://github.com/PyCQA/isort
-    rev: 6.0.1
+    rev: 6.1.0
     hooks:
       - id: isort
   - repo: https://github.com/pylint-dev/pylint
-    rev: v3.3.8
+    rev: v3.3.9
     hooks:
       - id: pylint
   - repo: https://github.com/pre-commit/mirrors-prettier
